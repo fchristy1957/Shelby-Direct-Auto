@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shelby Direct Auto — Inventory</title>
+  <meta name="description" content="Shelby Direct Auto — quality used cars in Royse City, TX. Visit us at 6731 State Highway 276, Royse City, TX 75189 or call (469) 863-1527."/>
+  <link rel="icon" href="./favicon.svg" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="./assets/logo.png" class="logo" alt="Shelby Direct Auto logo" />
+        <div class="brand-text">
+          <h1>Shelby Direct Auto</h1>
+          <p class="tagline">Direct Deals. Trusted Cars.</p>
+        </div>
+      </div>
+      <nav class="actions">
+        <a class="btn" href="/admin/">Admin</a>
+        <a class="btn primary" href="#inventory">View Inventory</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" class="input" placeholder="Search make, model, features, VIN..." />
+      <select id="status" class="input">
+        <option value="All">All Status</option>
+        <option>Available</option>
+        <option>Pending</option>
+        <option>Sold</option>
+      </select>
+      <select id="sort" class="input">
+        <option value="Newest">Newest</option>
+        <option value="PriceAsc">Price: Low→High</option>
+        <option value="PriceDesc">Price: High→Low</option>
+        <option value="MileageAsc">Mileage: Low→High</option>
+        <option value="MileageDesc">Mileage: High→Low</option>
+      </select>
+    </section>
+
+    <section id="inventory" class="grid"></section>
+
+    <template id="card-tpl">
+      <article class="card">
+        <div class="thumb"></div>
+        <div class="card-body">
+          <div class="top">
+            <h3 class="title"></h3>
+            <div class="price"></div>
+          </div>
+          <div class="meta">
+            <span class="badge year"></span>
+            <span class="badge status"></span>
+            <span class="mileage"></span>
+          </div>
+          <p class="desc"></p>
+          <div class="tags"></div>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <section class="contact">
+    <div class="container contact-inner">
+      <h2>Contact Us</h2>
+      <p><strong>Shelby Direct Auto</strong></p>
+      <p>6731 State Highway 276<br/>Royse City, TX 75189</p>
+      <p>📞 Call/Text: <a href="tel:14698631527">(469) 863-1527</a></p>
+      <p>📧 Email: <a href="mailto:shelbydirectauto@yahoo.com">shelbydirectauto@yahoo.com</a></p>
+      <p><strong>Hablamos Español</strong></p>
+      <p class="note">Contact: Thomas Shelby</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Shelby Direct Auto • 6731 State Highway 276, Royse City, TX 75189 • <a href="tel:14698631527">(469) 863-1527</a> • <a href="mailto:shelbydirectauto@yahoo.com">shelbydirectauto@yahoo.com</a> • <strong>Hablamos Español</strong> • <!-- build v10-cms --></small>
+    </div>
+  </footer>
+
+  <script src="./script.js" type="module"></script>
+</body>
+</html>
